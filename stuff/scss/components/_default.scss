@@ -1,0 +1,74 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: "Montserrat";
+}
+
+img {
+	width: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+svg {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+iframe {
+	width: 100%;
+	height: 100%;
+}
+
+.h-full {
+	height: 100%;
+}
+
+.w-full {
+	width: 100%;
+}
+
+.wh-full,
+.hw-full {
+	width: 100%;
+	height: 100%;
+}
+
+.overflow-x {
+	overflow-x: hidden;
+}
+
+.overflow-y {
+	overflow-y: hidden;
+}
+
+.overflow {
+	overflow: hidden;
+}
+
+.inline {
+	display: inline;
+}
+
+.hidden {
+	display: none;
+}
+
+.desktop {
+	@include tablet {
+		display: none;
+	}
+}
+
+.tablet {
+	@include desktop {
+		display: none;
+	}
+}
