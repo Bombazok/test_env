@@ -1,4 +1,13 @@
 extends ../base
 
+block vars
+	- pageTitle = "Анимация"
+	- bodyClasses = "flex jcc-aic w-full h-full"
+
 block content 
-	
+	.main.w-full.jcc-aic
+		.main__animation
+			.main__animation-cogs
+				+img("Asset1.svg").main__animation-cogs-1
+				+img("Asset2.svg").main__animation-cogs-2
+			+img("Asset3.svg")

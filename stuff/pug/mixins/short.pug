@@ -1,13 +1,13 @@
 mixin back-img(link_from_media)
-	div(style=`background-image:url(/frontend/markup/media/${link_from_media})`)&attributes(attributes)
+	div(style=`background-image:url(/public/media/${link_from_media})`)&attributes(attributes)
 		block
 
 mixin svg(link_from_media)
 	svg&attributes(attributes)
-		use(xlink:href=`/frontend/markup/media/${link_from_media}`)
+		use(xlink:href=`/public/media/${link_from_media}`)
 
 mixin img(link_from_media)
-	img(src=`/frontend/markup/media/${link_from_media}`)&attributes(attributes)
+	img(src=`/public/media/${link_from_media}`)&attributes(attributes)
 
 mixin pdf(link)
 	a(href=link, target="_blank")&attributes(attributes)
