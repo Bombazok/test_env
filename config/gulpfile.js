@@ -22,7 +22,7 @@ gulp.task(
 	"sass",
 	gulp.series(function () {
 		return gulp
-			.src("../stuff/scss/*.scss")
+			.src("../src/scss/*.scss")
 			.pipe(sass().on("error", sass.logError))
 			.pipe(autoprefixer(["last 15 versions"]))
 			.pipe(cleanCSS())
@@ -35,7 +35,7 @@ gulp.task(
 	"js",
 	gulp.series(function () {
 		return gulp
-			.src("../stuff/script/*.js")
+			.src("../src/script/*.js")
 			.pipe(terser())
 			.pipe(gulp.dest("../public/script/"));
 	})
@@ -45,7 +45,7 @@ gulp.task(
 	"pug",
 	gulp.series(function () {
 		return gulp
-			.src("../stuff/pug/pages/*.pug")
+			.src("../src/pug/pages/*.pug")
 			.pipe(pug())
 			.pipe(gulp.dest("../public/pages/"));
 	})
@@ -54,12 +54,12 @@ gulp.task(
 gulp.task(
 	"watch",
 	gulp.series(function () {
-		gulp.watch("../stuff/scss/**/*.scss", gulp.series("sass"));
-		gulp.watch("../stuff/script/**/*.js", gulp.series("js")).on(
+		gulp.watch("../src/scss/**/*.scss", gulp.series("sass"));
+		gulp.watch("../src/script/**/*.js", gulp.series("js")).on(
 			"change",
 			browserSync.reload
 		);
-		gulp.watch("../stuff/pug/**/*.pug", gulp.series("pug")).on(
+		gulp.watch("../src/pug/**/*.pug", gulp.series("pug")).on(
 			"change",
 			browserSync.reload
 		);
