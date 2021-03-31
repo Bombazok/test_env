@@ -65,10 +65,60 @@ iframe {
 	@include tablet {
 		display: none;
 	}
+
+	@include mobile {
+		display: none;
+	}
 }
 
 .tablet {
 	@include desktop {
 		display: none;
 	}
+
+	@include mobile {
+		display: none;
+	}
+}
+
+.mobile {
+	@include desktop {
+		display: none;
+	}
+
+	@include tablet {
+		display: none;
+	}
+}
+
+.desktop-hidden {
+	@include desktop {
+		display: none;
+	}
+}
+
+.tablet-hidden {
+	@include tablet {
+		display: none;
+	}
+}
+
+.mobile-hidden {
+	@include mobile {
+		display: none;
+	}
+}
+
+.relative {
+	position: relative;
+}
+
+.absolute {
+	position: absolute;
+}
+
+.fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
 }
